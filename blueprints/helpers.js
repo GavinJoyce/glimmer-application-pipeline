@@ -1,6 +1,7 @@
 'use strict';
 
 const stringUtils = require('ember-cli-string-utils');
+const SilentError = require('silent-error');
 
 function capitalize(name) {
   return name[0].toUpperCase() + name.slice(1);
@@ -12,7 +13,7 @@ function validComponentName(entityName) {
 
   let firstCharacter = name[0];
   if(firstCharacter !== firstCharacter.toUpperCase()) {
-    throw "Component name must be capitalized";
+    throw new SilentError("Component name must be capitalized");
   }
 
   return entityName;

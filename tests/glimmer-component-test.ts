@@ -4,7 +4,7 @@ import {
   setupTestHooks,
   expect,
   emberNew,
-  // emberGenerate,
+  emberGenerate,
   emberGenerateDestroy
 } from './helpers/helpers';
 
@@ -13,13 +13,13 @@ describe('Acceptance: ember generate and destroy glimmer-component', function() 
   setupTestHooks(this);
 
   // testing that this is failing doesn't work properly at the moment
-  // it.skip('glimmer-component foo', function () {
-  //   let args = ['glimmer-component', 'foo'];
-  //
-  //   return emberNew().then(() => {
-  //     return expect(emberGenerate(args)).to.be.rejected;
-  //   });
-  // });
+  it.skip('glimmer-component foo', function () {
+    let args = ['glimmer-component', 'foo'];
+
+    return emberNew().then(() => {
+      return expect(emberGenerate(args)).to.be.rejected;
+    });
+  });
 
   it('glimmer-component FooBar', function () {
     let args = ['glimmer-component', 'FooBar'];
